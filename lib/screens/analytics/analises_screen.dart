@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 
 class AnalisesScreen extends StatelessWidget {
   const AnalisesScreen({super.key});
@@ -10,7 +9,7 @@ class AnalisesScreen extends StatelessWidget {
     final colorScheme = theme.colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 56, 20, 100),
@@ -143,7 +142,7 @@ class AnalisesScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              _StoreCard(
+              const _StoreCard(
                 name: 'Pão de Açúcar',
                 visits: 8,
                 total: 'R\$ 1.245,60',
@@ -151,7 +150,7 @@ class AnalisesScreen extends StatelessWidget {
                 color: Colors.orange,
               ),
               const SizedBox(height: 8),
-              _StoreCard(
+              const _StoreCard(
                 name: 'Carrefour',
                 visits: 6,
                 total: 'R\$ 987,30',
@@ -159,7 +158,7 @@ class AnalisesScreen extends StatelessWidget {
                 color: Colors.blue,
               ),
               const SizedBox(height: 8),
-              _StoreCard(
+              const _StoreCard(
                 name: 'Atacadão',
                 visits: 4,
                 total: 'R\$ 1.456,80',
@@ -229,7 +228,7 @@ class _CategoryCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4),
                   child: LinearProgressIndicator(
                     value: percentage / 100,
-                    backgroundColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                    backgroundColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                     valueColor: AlwaysStoppedAnimation(color),
                     minHeight: 6,
                   ),
@@ -239,7 +238,7 @@ class _CategoryCard extends StatelessWidget {
               Text(
                 '${percentage.toStringAsFixed(1)}%',
                 style: theme.textTheme.bodySmall?.copyWith(
-                  color: colorScheme.onBackground.withOpacity(0.6),
+                  color: colorScheme.onSurface.withOpacity(0.6),
                 ),
               ),
             ],
@@ -313,7 +312,7 @@ class _StoreCard extends StatelessWidget {
                 Text(
                   '$visits visitas',
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: colorScheme.onBackground.withOpacity(0.6),
+                    color: colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
               ],

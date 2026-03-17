@@ -54,7 +54,7 @@ class _HistoricoScreenState extends State<HistoricoScreen> {
     final totalSpent = filtered.fold<double>(0, (sum, p) => sum + p.total);
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [
@@ -179,7 +179,7 @@ class _HistoricoScreenState extends State<HistoricoScreen> {
                                   Text(
                                     '${purchase.date} • ${purchase.items} itens',
                                     style: theme.textTheme.bodySmall?.copyWith(
-                                      color: colorScheme.onBackground.withOpacity(0.6),
+                                      color: colorScheme.onSurface.withOpacity(0.6),
                                     ),
                                   ),
                                 ],
@@ -197,7 +197,7 @@ class _HistoricoScreenState extends State<HistoricoScreen> {
                                 Icon(
                                   LucideIcons.chevronRight,
                                   size: 16,
-                                  color: colorScheme.onBackground.withOpacity(0.4),
+                                  color: colorScheme.onSurface.withOpacity(0.4),
                                 ),
                               ],
                             ),

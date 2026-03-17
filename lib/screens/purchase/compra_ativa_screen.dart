@@ -44,7 +44,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
     final formatter = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [
@@ -52,7 +52,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
             Container(
               padding: const EdgeInsets.fromLTRB(20, 56, 20, 12),
               decoration: BoxDecoration(
-                color: colorScheme.background,
+                color: colorScheme.surface,
                 border: Border(
                   bottom: BorderSide(
                     color: colorScheme.outline.withOpacity(0.1),
@@ -65,7 +65,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: IconButton(
@@ -88,7 +88,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                         Text(
                           '${items.length} itens na lista',
                           style: theme.textTheme.bodySmall?.copyWith(
-                            color: colorScheme.onBackground.withOpacity(0.6),
+                            color: colorScheme.onSurface.withOpacity(0.6),
                           ),
                         ),
                       ],
@@ -100,7 +100,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                       Text(
                         'Subtotal',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onBackground.withOpacity(0.6),
+                          color: colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                       Text(
@@ -161,13 +161,13 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                                       decoration: BoxDecoration(
-                                        color: colorScheme.surfaceVariant.withOpacity(0.5),
+                                        color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: Text(
                                         item.category,
                                         style: theme.textTheme.bodySmall?.copyWith(
-                                          color: colorScheme.onBackground.withOpacity(0.6),
+                                          color: colorScheme.onSurface.withOpacity(0.6),
                                           fontSize: 11,
                                         ),
                                       ),
@@ -205,7 +205,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                                       borderRadius: BorderRadius.circular(16),
                                     ),
                                     child: IconButton(
@@ -229,7 +229,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                                       borderRadius: BorderRadius.circular(16),
                                     ),
                                     child: IconButton(
@@ -247,7 +247,7 @@ class _CompraAtivaScreenState extends State<CompraAtivaScreen> {
                                   Text(
                                     '${formatter.format(item.unitPrice)} /un',
                                     style: theme.textTheme.bodySmall?.copyWith(
-                                      color: colorScheme.onBackground.withOpacity(0.6),
+                                      color: colorScheme.onSurface.withOpacity(0.6),
                                     ),
                                   ),
                                   Text(

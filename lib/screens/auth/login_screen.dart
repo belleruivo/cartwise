@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final colorScheme = theme.colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.0),
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     'Gestão inteligente de compras',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: colorScheme.onBackground.withOpacity(0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                 ],
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       'Entre na sua conta para continuar',
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: colorScheme.onBackground.withOpacity(0.6),
+                        color: colorScheme.onSurface.withOpacity(0.6),
                       ),
                     ),
                     const SizedBox(height: 32),
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: InputDecoration(
                         hintText: 'seu@email.com',
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: InputDecoration(
                         hintText: 'Sua senha',
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -226,7 +226,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     'Não tem uma conta? ',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: colorScheme.onBackground.withOpacity(0.6),
+                      color: colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                   TextButton(
@@ -258,7 +258,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final colorScheme = theme.colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.0),
@@ -272,7 +272,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 36,
                     height: 36,
                     decoration: BoxDecoration(
-                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(18),
                     ),
                     child: IconButton(
@@ -308,7 +308,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text(
                         'Crie uma conta para começar',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onBackground.withOpacity(0.6),
+                          color: colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                       const SizedBox(height: 32),
@@ -326,7 +326,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           hintText: 'Seu nome',
                           filled: true,
-                          fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                          fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -358,7 +358,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           hintText: 'seu@email.com',
                           filled: true,
-                          fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                          fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -390,7 +390,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           hintText: 'Mínimo 6 caracteres',
                           filled: true,
-                          fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                          fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -429,7 +429,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           hintText: 'Digite novamente',
                           filled: true,
-                          fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                          fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),

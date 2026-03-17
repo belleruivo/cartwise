@@ -10,7 +10,7 @@ class GrupoScreen extends StatelessWidget {
     final colorScheme = theme.colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 56, 20, 100),
@@ -27,7 +27,7 @@ class GrupoScreen extends StatelessWidget {
               Text(
                 'Compartilhe listas de compras com sua família',
                 style: theme.textTheme.bodyMedium?.copyWith(
-                  color: colorScheme.onBackground.withOpacity(0.6),
+                  color: colorScheme.onSurface.withOpacity(0.6),
                 ),
               ),
               const SizedBox(height: 32),
@@ -61,7 +61,7 @@ class GrupoScreen extends StatelessWidget {
                         'Colabore com sua família nas compras\ne economize tempo e dinheiro',
                         textAlign: TextAlign.center,
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onBackground.withOpacity(0.6),
+                          color: colorScheme.onSurface.withOpacity(0.6),
                           height: 1.5,
                         ),
                       ),

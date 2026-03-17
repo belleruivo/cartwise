@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
     final formatter = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Bom dia,',
                           style: theme.textTheme.bodySmall?.copyWith(
-                            color: colorScheme.onBackground.withOpacity(0.6),
+                            color: colorScheme.onSurface.withOpacity(0.6),
                           ),
                         ),
                         const SizedBox(height: 4),
@@ -84,13 +84,13 @@ class HomeScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: colorScheme.surfaceVariant.withOpacity(0.5),
+                            color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Icon(
                             LucideIcons.bell,
                             size: 20,
-                            color: colorScheme.onBackground,
+                            color: colorScheme.onSurface,
                           ),
                         ),
                         Positioned(
@@ -246,7 +246,7 @@ class HomeScreen extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: colorScheme.onBackground,
+                      color: colorScheme.onSurface,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -255,12 +255,12 @@ class HomeScreen extends StatelessWidget {
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: colorScheme.background,
+                            color: colorScheme.surface,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Icon(
                             LucideIcons.plus,
-                            color: colorScheme.onBackground,
+                            color: colorScheme.onSurface,
                             size: 20,
                           ),
                         ),
@@ -272,14 +272,14 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 'Iniciar nova compra',
                                 style: theme.textTheme.bodyMedium?.copyWith(
-                                  color: colorScheme.background,
+                                  color: colorScheme.surface,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
                               Text(
                                 'Comece a registrar seus itens',
                                 style: theme.textTheme.bodySmall?.copyWith(
-                                  color: colorScheme.background.withOpacity(0.7),
+                                  color: colorScheme.surface.withOpacity(0.7),
                                 ),
                               ),
                             ],
@@ -287,7 +287,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Icon(
                           LucideIcons.chevronRight,
-                          color: colorScheme.background,
+                          color: colorScheme.surface,
                           size: 20,
                         ),
                       ],
@@ -312,6 +312,18 @@ class HomeScreen extends StatelessWidget {
                         icon: LucideIcons.barChart2,
                         label: 'Análises',
                         onTap: () => appState.setActiveTab('analises'),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    Expanded(
+                      child: _QuickActionCard(
+                        icon: LucideIcons.terminal,
+                        label: 'Exercícios',
+                        onTap: () => appState.setScreen('exercicios'),
                       ),
                     ),
                   ],
@@ -392,7 +404,7 @@ class HomeScreen extends StatelessWidget {
                                       Text(
                                         '${purchase.date} • ${purchase.items} itens',
                                         style: theme.textTheme.bodySmall?.copyWith(
-                                          color: colorScheme.onBackground.withOpacity(0.6),
+                                          color: colorScheme.onSurface.withOpacity(0.6),
                                         ),
                                       ),
                                     ],
@@ -410,7 +422,7 @@ class HomeScreen extends StatelessWidget {
                                     Icon(
                                       LucideIcons.chevronRight,
                                       size: 16,
-                                      color: colorScheme.onBackground.withOpacity(0.4),
+                                      color: colorScheme.onSurface.withOpacity(0.4),
                                     ),
                                   ],
                                 ),

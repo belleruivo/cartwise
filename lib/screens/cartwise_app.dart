@@ -4,6 +4,13 @@ import 'package:lucide_icons/lucide_icons.dart';
 import '../providers/app_state.dart';
 import 'auth/login_screen.dart';
 import 'home/home_screen.dart';
+import 'exercises/exercises_hub_screen.dart';
+import 'alignment/alignment_demo_screen.dart';
+import 'exercises/cross_axis_alignment_demo_screen.dart';
+import 'exercises/image_asset_demo_screen.dart';
+import 'exercises/box_fit_demo_screen.dart';
+import 'exercises/decorated_image_demo_screen.dart';
+import 'exercises/final_exercise_screen.dart';
 import 'purchase/nova_compra_screen.dart';
 import 'purchase/compra_ativa_screen.dart';
 import 'purchase/adicionar_item_screen.dart';
@@ -32,6 +39,41 @@ class CartwiseApp extends StatelessWidget {
     // Compra ativa screen
     if (appState.currentScreen == 'compra-ativa') {
       return const CompraAtivaScreen();
+    }
+
+    // Exercise hub
+    if (appState.currentScreen == 'exercicios') {
+      return const ExercisesHubScreen();
+    }
+
+    // Exercise screen (Alinhamento)
+    if (appState.currentScreen == 'alignment-demo') {
+      return const AlignmentDemoScreen();
+    }
+
+    // Exercise screen (CrossAxisAlignment)
+    if (appState.currentScreen == 'cross-alignment-demo') {
+      return const CrossAxisAlignmentDemoScreen();
+    }
+
+    // Exercise screen (Image.asset)
+    if (appState.currentScreen == 'image-asset-demo') {
+      return const ImageAssetDemoScreen();
+    }
+
+    // Exercise screen (BoxFit)
+    if (appState.currentScreen == 'box-fit-demo') {
+      return const BoxFitDemoScreen();
+    }
+
+    // Exercise screen (Imagem de fundo + texto)
+    if (appState.currentScreen == 'decorated-image-demo') {
+      return const DecoratedImageDemoScreen();
+    }
+
+    // Exercise screen (Exercício Final)
+    if (appState.currentScreen == 'final-exercise') {
+      return const FinalExerciseScreen();
     }
 
     // Adicionar item screen
@@ -105,7 +147,7 @@ class _BottomNavBar extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: colorScheme.background,
+        color: colorScheme.surface,
         border: Border(
           top: BorderSide(
             color: colorScheme.outline.withOpacity(0.1),
@@ -188,7 +230,7 @@ class _NavItem extends StatelessWidget {
               Icon(
                 icon,
                 size: 20,
-                color: isActive ? colorScheme.primary : colorScheme.onBackground.withOpacity(0.5),
+                color: isActive ? colorScheme.primary : colorScheme.onSurface.withOpacity(0.5),
               ),
               const SizedBox(height: 4),
               Text(
@@ -196,7 +238,7 @@ class _NavItem extends StatelessWidget {
                 style: theme.textTheme.bodySmall?.copyWith(
                   fontSize: 10,
                   fontWeight: isActive ? FontWeight.w600 : FontWeight.w500,
-                  color: isActive ? colorScheme.primary : colorScheme.onBackground.withOpacity(0.5),
+                  color: isActive ? colorScheme.primary : colorScheme.onSurface.withOpacity(0.5),
                 ),
               ),
               if (isActive)

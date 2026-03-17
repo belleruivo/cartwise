@@ -52,7 +52,7 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
     final appState = context.watch<AppState>();
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [
@@ -72,7 +72,7 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: IconButton(
@@ -113,7 +113,7 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
                       decoration: InputDecoration(
                         hintText: 'Ex: Leite Integral',
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -140,10 +140,10 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
                     ),
                     const SizedBox(height: 8),
                     DropdownButtonFormField<String>(
-                      value: _category,
+                      initialValue: _category,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -184,7 +184,7 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: colorScheme.surfaceVariant.withOpacity(0.3),
+                            color: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
                               color: colorScheme.outline.withOpacity(0.2),
@@ -237,7 +237,7 @@ class _AdicionarItemScreenState extends State<AdicionarItemScreen> {
                       decoration: InputDecoration(
                         hintText: '0,00',
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),

@@ -57,7 +57,7 @@ class _NovaCompraScreenState extends State<NovaCompraScreen> {
     final appState = context.watch<AppState>();
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [
@@ -70,7 +70,7 @@ class _NovaCompraScreenState extends State<NovaCompraScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: colorScheme.surfaceVariant.withOpacity(0.5),
+                      color: colorScheme.surfaceContainerHighest.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: IconButton(
@@ -111,7 +111,7 @@ class _NovaCompraScreenState extends State<NovaCompraScreen> {
                         hintText: 'Nome do supermercado',
                         prefixIcon: const Icon(LucideIcons.mapPin, size: 18),
                         filled: true,
-                        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
+                        fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.3),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide(color: colorScheme.outline.withOpacity(0.2)),
@@ -133,7 +133,7 @@ class _NovaCompraScreenState extends State<NovaCompraScreen> {
                     Text(
                       'SUPERMERCADOS RECENTES',
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: colorScheme.onBackground.withOpacity(0.6),
+                        color: colorScheme.onSurface.withOpacity(0.6),
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0.5,
                       ),
@@ -236,7 +236,7 @@ class _NovaCompraScreenState extends State<NovaCompraScreen> {
                             child: RichText(
                               text: TextSpan(
                                 style: theme.textTheme.bodySmall?.copyWith(
-                                  color: colorScheme.onBackground.withOpacity(0.7),
+                                  color: colorScheme.onSurface.withOpacity(0.7),
                                   height: 1.5,
                                 ),
                                 children: [
