@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_core/firebase_core.dart'; // 👈 ADICIONE
+import 'package:firebase_core/firebase_core.dart';
 import 'providers/app_state.dart';
 import 'screens/cartwise_app.dart';
-import 'firebase_options.dart'; // 👈 ADICIONE
+import 'firebase_options.dart'; 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // 👈 IMPORTANTE
+  WidgetsFlutterBinding.ensureInitialized(); 
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

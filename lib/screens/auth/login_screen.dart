@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import '../../providers/app_state.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -32,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_isRegisterView) {
       return _buildRegisterView(context);
     }
-    return _buildLoginView(context);
+    return _buildLoginView(context);  
   }
 
   Widget _buildLoginView(BuildContext context) {
@@ -213,9 +214,37 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
+                        
                       ),
                     ),
-                  ],
+                    const SizedBox(height: 16),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () async {
+                        try {
+                          await FirebaseFirestore.instance
+                              .collection('usuarios_teste')
+                              .add({
+                            'email': _emailController.text,
+                            'senha': _passwordController.text,
+                            'createdAt': Timestamp.now(),
+                          });
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Salvo no Firebase!')),
+                          );
+                        } catch (e) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Erro: $e')),
+                          );
+                        }
+                      },
+                      child: const Text('Testar Firebase'),
+                    ),
+                  ),
+                  ],                 
                 ),
               ),
 
